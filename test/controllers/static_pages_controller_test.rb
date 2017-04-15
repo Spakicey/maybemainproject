@@ -25,4 +25,16 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "Contact | Brick Works Company"
   end
+  
+  test "should get mortar" do
+    get mortar_path
+    assert_response :success
+    assert_select "title", "Mortar | Brick Works Company"
+  end
+  
+  test "should get turtle" do
+    get turtle_path
+    assert_response :success
+    assert_select "title", "Turtle | Brick Works Company"
+  end
 end

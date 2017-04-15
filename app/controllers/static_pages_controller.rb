@@ -10,4 +10,10 @@ class StaticPagesController < ApplicationController
   
   def contact
   end
+  
+  def mortar
+  end
+  
+  def turtle
+  end
 end
