@@ -1,10 +1,26 @@
 <% provide(:title, "Mortar") %>
-<h1>Mortar</h1>
-<p>The Mortar is a high-end keyboard developed right here at Brick Works. The keyboard is designed with the enthusiast at mind. The Mortar as a standard option comes fully assembled,
-            but for those who wish to save some money and want a fun DIY project, we also offer the Mortar as a kit. The Mortar's main features are a split design, meaning you can orient the two halves of the keyboard
-            to your liking for enhanced ergonomics, multiple key layers for added functionality as well as custom macros, and screens on both halves of the keyboard that can be programmed by you for whatever you'd like.
-            The screens will display which layer you are on by default. For more information click <a href="#">here</a>.</p>
-
+<div class="center jumbotron">
+    <h1>Mortar</h1>
+    
+    <p>The Mortar is a high-end mechanical keyboard developed right here at Brick Works. The keyboard is designed with the enthusiast at mind and as a standard option comes fully assembled,
+            but for those who wish to save some money and want a fun DIY project, we also offer the Mortar as a kit. It utilizes a Teensy 2.0, which makes the Mortar easy to program. You can design as many layers
+            as you would like for all sorts of different functions and purposes. The switches on the Mortar come stock as Cherry MX, but if you decide to build it yourself, you can put on any Cherry-clone switch
+            you'd like.</p>
+  </div>
+<h2 class="text-left">It starts with a schematic</h2>            
+<%= link_to image_tag("MortarSchematic.png", alt: "Mortar Schematic")%>
+<p>The Mortar was made with a CAD software named "KICAD." It's open source, so anyone can use it! For the standard Mortar, we use a Teensy 2.0 for the brains. We decided on a Teensy becuase they are widely available and
+            easy to program.</p>
+<h2 class="text-left">Designing the cicuit board</h2>            
+<%= link_to image_tag("MortarBoardLayout.png", alt: "Mortar Circuit Board Layout")%>
+<p>Once we finished the schematic for the Mortar, it was time to build the design of the circuit board. Here, we laid out each of the components in their appropriate spot, then connected them all with traces.</p>
+<h2 class="text-left">3D render of the circuit board</h2> 
+<%= link_to image_tag("Mortar3DFront.png", alt: "Mortar 3D Front")%>
+<%= link_to image_tag("Mortar3DBack.png", alt: "Mortar 3D Back")%>
+<p>KICAD allows you to view your circuit board in a 3D viewer to give a good look at what the physical board could look like.</p>
+<h2 class="text-left">Pricing</h2>
+<p>The Mortar fully assembled is $150.</p>
+<p>The Mortar DIY kit is $100.</p>
 <% if logged_in? %>
   <div class="row">
     <aside class="center">
