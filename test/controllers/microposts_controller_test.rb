@@ -26,6 +26,6 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
     assert_no_difference 'Micropost.count' do
       delete micropost_path(micropost)
     end
-    assert_redirected_to root_url
+    assert_redirected_to mortar_path
   end
 end

@@ -8,7 +8,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
 
   test "micropost interface" do
     log_in_as(@user)
-    get root_path
+    get mortar_path
     assert_select 'div.pagination'
     # Invalid submission
     assert_no_difference 'Micropost.count' do
@@ -20,7 +20,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     assert_difference 'Micropost.count', 1 do
       post microposts_path, params: { micropost: { content: content } }
     end
-    assert_redirected_to root_url
+    assert_redirected_to mortar_path
     follow_redirect!
     assert_match content, response.body
     # Delete post

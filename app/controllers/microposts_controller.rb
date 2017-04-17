@@ -6,10 +6,9 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
       flash[:success] = "Micropost created!"
-      redirect_to root_url
+      redirect_to mortar_path
     else
       @feed_items = []
-      render 'static_pages/home'
       render 'static_pages/mortar'
     end
   end
@@ -28,6 +27,6 @@ class MicropostsController < ApplicationController
     
     def correct_user
       @micropost = current_user.microposts.find_by(id: params[:id])
-      redirect_to root_url if @micropost.nil?
+      redirect_to mortar_path if @micropost.nil?
     end
 end
