@@ -1,6 +1,8 @@
 <% provide(:title, "Mortar") %>
-<% if logged_in? %>
-  <div class="row">
+<h1>Mortar</h1>
+<p>This is the product page for the Mortar.</p>
+
+<div class="row">
     <aside class="col-md-4">
       <section class="user_info">
         <%= render 'shared/user_info' %>
@@ -14,4 +16,3 @@
       <%= render 'shared/feed' %>
     </div>
   </div>
-<% end %>
